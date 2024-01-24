@@ -6,9 +6,10 @@ using UnityEngine.EventSystems;
 
 public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public Canvas canvas;
     RectTransform rectTransform;
     public float Amplitude = 50f; // Distance max sur laquelle la bouche peut être déplacée
-    [HideInInspector] public float InitialYPos;
+    public float InitialYPos;
     private float mouseYOffset; // Diff entre positions y de la souris et de la bouche (évite que la bouche se centre sur la souris)
     private bool dragging = false;
 
@@ -19,13 +20,13 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        mouseYOffset = Input.mousePosition.y - rectTransform.anchoredPosition.y;
+        mouseYOffset = Input.mousePosition.y / canvas.scaleFactor - rectTransform.anchoredPosition.y;
         dragging = true;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, Mathf.Clamp(Input.mousePosition.y - mouseYOffset,InitialYPos - Amplitude,InitialYPos));
+        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, Mathf.Clamp(((Input.mousePosition.y / canvas.scaleFactor) - mouseYOffset),InitialYPos - Amplitude,InitialYPos));
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -37,7 +38,7 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (!dragging && transform.position.y != InitialYPos) // La bouche reprend sa position d'origine lorsqu'elle n'est pas tirée
         {
-            rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, Mathf.Clamp(rectTransform.anchoredPosition.y + 2, InitialYPos - Amplitude, InitialYPos));
+            rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, Mathf.Clamp(rectTransform.anchoredPosition.y + 0.1f, InitialYPos - Amplitude, InitialYPos));
         }
     }
 }
