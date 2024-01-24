@@ -46,6 +46,7 @@ public class BlaBlaScript : MonoBehaviour
     private float typeLeftTime;
     private bool isFinished;
     private bool buttonPressed;
+    [SerializeField] private AudioSource VoiceBoss;
     #endregion
 
     private void Start()
@@ -89,10 +90,12 @@ public class BlaBlaScript : MonoBehaviour
             actualCharacter++;
             textBox.text += dialogues[dialogueId].dial[line].text[actualCharacter - 1].ToString();
             typeLeftTime = TypingSpeed;
+            VoiceBoss.Play();
+            
         } else if (!finishedTalk)
         {
             finishedTalk = true;
-            SendMessage("StartTimer");
+            //SendMessage("StartTimer");
         }
     }
 
@@ -114,10 +117,10 @@ public class BlaBlaScript : MonoBehaviour
     {
         if (expression == dialogues[dialogueId].dial[line].mustLaugh)
         {
-            SendMessage("OnAddScore");
+            //SendMessage("OnAddScore");
         } else
         {
-            SendMessage("OnLoseLife");
+            //SendMessage("OnLoseLife");
         }
     }
 
