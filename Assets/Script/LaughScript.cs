@@ -14,6 +14,8 @@ public class LaughScript : MonoBehaviour
     public float OpenPercent = 0.9f; // La bouche s'ouvrira si elle est ouverte à 90% (valeur modifiable)
     public float MovementsToLaugh = 6f; // Nombre de mouvements nécessaires pour rire
     public float MovementResetTime = 3f; // Temps pour que le nombre de mouvements reset (si aucun n'est effectué)
+    public AudioSource audioSource;
+    public AudioClip audioClip;
     public bool IsLaughing = false; // Rire
     [SerializeField] private bool isOpen = false; // Bouche ouverte
     [SerializeField] private float closedY; // Pos Y où la bouche se fermera
@@ -35,6 +37,7 @@ public class LaughScript : MonoBehaviour
             movements += 1f;
             isOpen = true;
             lastMoveTime = Time.time;
+            audioSource.PlayOneShot(audioClip);
         }
         if (isOpen && rectTransform.anchoredPosition.y >= closedY) // Fermer
         {
