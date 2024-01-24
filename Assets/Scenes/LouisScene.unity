@@ -1660,7 +1660,7 @@ PrefabInstance:
       objectReference: {fileID: 1558798091}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: lastDialogue.dial.Array.size
@@ -1685,6 +1685,22 @@ PrefabInstance:
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[5].dial.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: lastDialogue.dial.Array.data[0].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: lastDialogue.dial.Array.data[1].mustLaugh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[0].text
@@ -1731,6 +1747,30 @@ PrefabInstance:
       value: as opposite to lambda who do not consider you at all
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[0].text
+      value: La bad ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[1].text
+      value: ou tu rigole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[2].text
+      value: Ou pas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[5].dial.Array.data[0].text
+      value: la good ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[5].dial.Array.data[1].text
+      value: Ou on rigole
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[5].dial.Array.data[2].text
+      value: ou pas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[1].mustLaugh
       value: 1
       objectReference: {fileID: 0}
@@ -1753,6 +1793,22 @@ PrefabInstance:
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[2].mustLaugh
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[1].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[2].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[5].dial.Array.data[1].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[5].dial.Array.data[2].mustLaugh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7751275330920336317, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: m_AnchorMax.x

@@ -70,8 +70,7 @@ public class GameValues : MonoBehaviour
         }
         if (playerLife <= 0)
         {
-            print("Death");
-            //Die
+            SendMessage("DieNow");
         }
     }
 }

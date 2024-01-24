@@ -29,7 +29,6 @@ public class BlaBlaScript : MonoBehaviour
     
     [Header ("Dialogues")]
     public Dialogue[] dialogues;
-    public Dialogue lastDialogue;
 
     [System.Serializable]
     public class Dialogue
@@ -52,13 +51,13 @@ public class BlaBlaScript : MonoBehaviour
     [SerializeField] private float TypingSpeed;
     private float typeLeftTime;
     private bool isFinished;
-    //private bool buttonPressed;
+    private bool isDead;
     [SerializeField] private AudioSource VoiceBoss;
     #endregion
 
     private void Start()
     {
-        for (int i = 1; i < dialogues.Length; i++)
+        for (int i = 1; i < dialogues.Length - 2; i++)
         {
             availableNumbers.Add(i);
         }
@@ -95,21 +94,7 @@ public class BlaBlaScript : MonoBehaviour
 
     public void ProgressInText ()
     {
-        if (dialogueId == dialogues.Length)
-        {
-            if (actualCharacter < lastDialogue.dial.Length)
-            {
-                finishedTalk = false;
-                actualCharacter++;
-                textBox.text += lastDialogue.dial[line].text[actualCharacter - 1].ToString();
-                typeLeftTime = TypingSpeed;
-                VoiceBoss.Play();
-            } else if (!finishedTalk)
-            {
-                finishedTalk = true;
-                SendMessage("StartTimer");
-            }
-        } else if (actualCharacter < dialogues[dialogueId].dial[line].text.Length)
+        if (actualCharacter < dialogues[dialogueId].dial[line].text.Length)
         {
             finishedTalk = false;
             actualCharacter++;
@@ -126,19 +111,6 @@ public class BlaBlaScript : MonoBehaviour
 
     public void OnExpression(bool expression)
     {
-        //buttonPressed = true;
-        if (dialogueId == dialogues.Length)
-        {
-            if (actualCharacter == lastDialogue.dial[line].text.Length)
-            {
-                CheckExpression(expression);
-                AddTextBox();
-            } else
-            {
-                textBox.text = lastDialogue.dial[line].text;
-                actualCharacter = lastDialogue.dial[line].text.Length;
-            }
-        } else
         {
             if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
             {
@@ -154,16 +126,6 @@ public class BlaBlaScript : MonoBehaviour
 
     public void CheckExpression(bool expression)
     {
-        if (dialogueId == dialogues.Length)
-        {
-            if (expression == lastDialogue.dial[line].mustLaugh)
-            {
-                SendMessage("OnAddScore");
-            } else
-            {
-                SendMessage("OnLoseLife");
-            }
-        } else
         {
             if (expression == dialogues[dialogueId].dial[line].mustLaugh)
             {
@@ -186,16 +148,14 @@ public class BlaBlaScript : MonoBehaviour
         actualCharacter = 0;
         
         line++;
-        if (dialogueId == dialogues.Length)
+        if(line >= dialogues[dialogueId].dial.Length)
         {
-            if (line >= lastDialogue.dial.Length)
+            if (dialogueId >= dialogues.Length - 2)
             {
                 EndGame();
                 return;
 
             }
-        } else if(line >= dialogues[dialogueId].dial.Length)
-        {
             line = 0;
             if (availableNumbers.Count > 0)
             {
@@ -205,7 +165,13 @@ public class BlaBlaScript : MonoBehaviour
                 availableNumbers.TrimExcess();
             } else
             {
-                dialogueId = dialogues.Length;
+                if (isDead)
+                {
+                    dialogueId = dialogues.Length - 2;
+                } else
+                {
+                    dialogueId = dialogues.Length - 1;
+                }
             }
             isFinished = false;
         }
@@ -215,6 +181,12 @@ public class BlaBlaScript : MonoBehaviour
         Canvas.ForceUpdateCanvases();
         scroller.normalizedPosition = new Vector2(0, 0);
         Canvas.ForceUpdateCanvases();
+    }
+
+    public void DieNow()
+    {
+        isDead = true;
+        print("Dead");
     }
 
     public void EndGame()
