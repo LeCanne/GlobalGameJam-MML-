@@ -803,6 +803,8 @@ GameObject:
   - component: {fileID: 992893979}
   - component: {fileID: 992893978}
   - component: {fileID: 992893977}
+  - component: {fileID: 992893981}
+  - component: {fileID: 992893980}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -884,6 +886,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &992893980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992893976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d4358ba9be36b4299f6035baf04aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLife: 3
+  reactTime: 5
+--- !u!114 &992893981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992893976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1386784177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,7 +1356,7 @@ MonoBehaviour:
     - Anyways... We're here to talk promotion.
     - You look man enough too. Not like those twinks at human resources.
     - God I hate this man. His dog probably died or something, eh?
-    mustLaugh: 0
+    mustLaugh: 
   - texts:
     - Here's something else. So, you've ever tried to direct a group of dumbasses?
     - I do that every single day. Sometimes I lock my office door to not answer complaints.
@@ -1307,7 +1367,7 @@ MonoBehaviour:
     - 'Like listen: "Oh I got into a car accident"'
     - USE YOUR LEGS BUCKO! I am not paying for your mistake!
     - Like what's next, "I want a poney?"
-    mustLaugh: 0
+    mustLaugh: 
   - texts:
     - Oh wait I got somethin' else. I ain't got the best vision but when looking
       into the mirror I can see my hairs.
@@ -1318,7 +1378,7 @@ MonoBehaviour:
     - Well uh, she left me. Apparently I was "A big fucking idiot".
     - I don't know what her deal was. Could've sworn I made MY SIDE of the bed.
     - The hell do you want me to do woman? Do your side of the bed too?.
-    mustLaugh: 0
+    mustLaugh: 
   - texts:
     - Ey, you listen to music sometimes?  Yeah, you have a face that looks like you
       do.
@@ -1333,7 +1393,7 @@ MonoBehaviour:
     - Yeah I think musicians are asshats, you thought I would I think otherwise?
     - Imagine getting paid for like, pulling strings. I can do that too you know.
     - I do it with the board of directors everyday, see what I mean?
-    mustLaugh: 0
+    mustLaugh: 
   TypingSpeed: 0.05
 --- !u!114 &2107795834
 MonoBehaviour:
