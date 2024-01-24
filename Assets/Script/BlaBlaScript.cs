@@ -52,7 +52,7 @@ public class BlaBlaScript : MonoBehaviour
     [SerializeField] private float TypingSpeed;
     private float typeLeftTime;
     private bool isFinished;
-    private bool buttonPressed;
+    //private bool buttonPressed;
     [SerializeField] private AudioSource VoiceBoss;
     #endregion
 
@@ -78,7 +78,7 @@ public class BlaBlaScript : MonoBehaviour
             {
                 typeLeftTime -= Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.Space))
+            /*if (Input.GetKey(KeyCode.Space))
             {
                 if (!buttonPressed)
                 {
@@ -87,8 +87,7 @@ public class BlaBlaScript : MonoBehaviour
             } else
             {
                 buttonPressed = false;
-            }
-            
+            }*/
         }
     }
 
@@ -127,7 +126,7 @@ public class BlaBlaScript : MonoBehaviour
 
     public void OnExpression(bool expression)
     {
-        buttonPressed = true;
+        //buttonPressed = true;
         if (dialogueId == dialogues.Length)
         {
             if (actualCharacter == lastDialogue.dial[line].text.Length)

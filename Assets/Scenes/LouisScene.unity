@@ -1659,16 +1659,100 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558798091}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: lastDialogue.dial.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: lastDialogue.dial.Array.data[0].text
-      value: End It All
+      value: thanks
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: lastDialogue.dial.Array.data[1].text
-      value: To test it all
+      value: looks like it works
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[0].dial.Array.data[0].text
+      value: Hello my little sweetie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[0].dial.Array.data[1].text
+      value: I'm your boss, and I'm about to promote you to the rank of femboy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[0].text
+      value: Please don't take this whole shit seriously, I'm but joking
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[1].text
+      value: No really, this is for playtest purposes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[2].text
+      value: Cause if it don't work the jam is lost lmao
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[0].text
+      value: Laugh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[1].text
+      value: stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[2].text
+      value: I said stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.data[0].text
+      value: Bern is better than lambda
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.data[1].text
+      value: Cause bern consider you as furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.data[2].text
+      value: as opposite to lambda who do not consider you at all
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[0].dial.Array.data[1].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[2].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[0].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[1].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[2].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.data[2].mustLaugh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7751275330920336317, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: m_AnchorMax.x
