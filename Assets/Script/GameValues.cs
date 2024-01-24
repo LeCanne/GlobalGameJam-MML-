@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameValues : MonoBehaviour
 {
+    [Header("References")]
+    public Slider timeSlider;
+
+    [Header ("NumericalValues")]
     public int playerLife;
     private int Score;
     public float reactTime;
@@ -14,9 +19,11 @@ public class GameValues : MonoBehaviour
     {
         if (canReact)
         {
+            timeSlider.value = 1 - leftTime / reactTime;
             leftTime -= Time.deltaTime;
             if (leftTime <= 0)
             {
+                SendMessage("NoExpression");
                 OnLoseLife();
             }
         }
@@ -26,6 +33,7 @@ public class GameValues : MonoBehaviour
     {
         leftTime = reactTime;
         canReact = true;
+        timeSlider.SetEnabled(true);
     }
 
     public void OnAddScore()
@@ -38,6 +46,7 @@ public class GameValues : MonoBehaviour
     {
         playerLife--;
         canReact = false;
+        timeSlider.SetEnabled(false);
         if (playerLife <= 0)
         {
             //Die
