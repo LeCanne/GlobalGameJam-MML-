@@ -5,6 +5,8 @@ using System.Linq;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class BlaBlaScript : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class BlaBlaScript : MonoBehaviour
     public Transform textSpawn;
     public Transform textUpLimit;
     public Transform textDownLimit;
+    public ScrollRect scroller;
     public float scrollSpeed;
     private readonly List<Transform> InstanciatedTexts = new();
     public float messagesSpacing;
@@ -58,7 +61,7 @@ public class BlaBlaScript : MonoBehaviour
 
             CheckInputs();
         }
-        Scroll();
+        //Scroll();
     }
 
     public void ProgressInText ()
@@ -105,7 +108,7 @@ public class BlaBlaScript : MonoBehaviour
             textSpawn.GetComponent<Rigidbody2D>().AddForce(scrollSpeed * Time.deltaTime * Vector2.Distance(textSpawn.position, textDownLimit.position) * -Vector2.up, ForceMode2D.Force);
         } else if (InstanciatedTexts[0].position.y < textUpLimit.position.y)
         {
-            textSpawn.GetComponent<Rigidbody2D>().AddForce(scrollSpeed * Time.deltaTime * Vector2.Distance(InstanciatedTexts[0].position, textDownLimit.position) * Vector2.up, ForceMode2D.Force);
+            textSpawn.GetComponent<Rigidbody2D>().AddForce(scrollSpeed * Time.deltaTime * Vector2.Distance(InstanciatedTexts[0].position, textUpLimit.position) * Vector2.up, ForceMode2D.Force);
         }
 
         
@@ -115,23 +118,26 @@ public class BlaBlaScript : MonoBehaviour
     {
         actualCharacter = 0;
         
-        if (InstanciatedTexts.Count > 0)
+        /*if (InstanciatedTexts.Count > 0)
         {
             for (int i = 0; i < InstanciatedTexts.Count; i++)
             {
                 InstanciatedTexts[i].position += Vector3.up * messagesSpacing;
             }
-        }
+        }*/
+        
         line++;
         if (line >= dialogues[dialogueId].texts.Length)
         {
             line = 0;
-            dialogueId = UnityEngine.Random.Range(0, dialogues.Length);
+            dialogueId = UnityEngine.Random.Range(1, dialogues.Length);
             isFinished = false;
-        } 
+        }
         InstanciatedTexts.Add(Instantiate(textObject, textSpawn.position, textSpawn.rotation, textSpawn).transform);
         textBox = InstanciatedTexts[^1].GetChild(0).GetComponent<TextMeshProUGUI>();
         textBox.text = null;
-        
+        Canvas.ForceUpdateCanvases();
+        scroller.normalizedPosition = new Vector2(0, 0);
+        Canvas.ForceUpdateCanvases();
     }
 }
