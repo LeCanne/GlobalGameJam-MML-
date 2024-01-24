@@ -4,26 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using static BlaBlaScript;
 
 public class BlaBlaScript : MonoBehaviour
 {
     #region groupeDeTexte
     public GameObject textObject;
     public Transform textSpawn;
-    public Transform textUpLimit;
-    public Transform textDownLimit;
     public ScrollRect scroller;
     public float scrollSpeed;
     private readonly List<Transform> InstanciatedTexts = new();
+    private readonly List<int> availableNumbers = new();
     public float messagesSpacing;
     private bool finishedTalk;
     #endregion
 
     #region TextRegion
+    
+    [Header ("Dialogues")]
+    public Dialogue[] dialogues;
+    public Dialogue lastDialogue;
+
     [System.Serializable]
     public class Dialogue
     {
@@ -37,7 +43,7 @@ public class BlaBlaScript : MonoBehaviour
         public bool mustLaugh;
     }
 
-    public Dialogue[] dialogues;
+    [Header("DialoguesVares")]
     private int dialogueId;
     private TextMeshProUGUI textBox;
     private int line;
@@ -51,6 +57,10 @@ public class BlaBlaScript : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 1; i < dialogues.Length; i++)
+        {
+            availableNumbers.Add(i);
+        }
         dialogueId = 0;
         line = -1;
         AddTextBox();
@@ -79,49 +89,91 @@ public class BlaBlaScript : MonoBehaviour
             }
             
         }
-        //Scroll();
     }
+
+    #region func
 
     public void ProgressInText ()
     {
-        if (actualCharacter < dialogues[dialogueId].dial[line].text.Length)
+        if (dialogueId == dialogues.Length)
+        {
+            if (actualCharacter < lastDialogue.dial.Length)
+            {
+                finishedTalk = false;
+                actualCharacter++;
+                textBox.text += lastDialogue.dial[line].text[actualCharacter - 1].ToString();
+                typeLeftTime = TypingSpeed;
+                VoiceBoss.Play();
+            } else if (!finishedTalk)
+            {
+                finishedTalk = true;
+                SendMessage("StartTimer");
+            }
+        } else if (actualCharacter < dialogues[dialogueId].dial[line].text.Length)
         {
             finishedTalk = false;
             actualCharacter++;
             textBox.text += dialogues[dialogueId].dial[line].text[actualCharacter - 1].ToString();
             typeLeftTime = TypingSpeed;
             VoiceBoss.Play();
-            
+
         } else if (!finishedTalk)
         {
             finishedTalk = true;
-            //SendMessage("StartTimer");
+            SendMessage("StartTimer");
         }
     }
 
     public void OnExpression(bool expression)
     {
         buttonPressed = true;
-        if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
+        if (dialogueId == dialogues.Length)
         {
-            CheckExpression(expression);
-            AddTextBox();
+            if (actualCharacter == lastDialogue.dial[line].text.Length)
+            {
+                CheckExpression(expression);
+                AddTextBox();
+            } else
+            {
+                textBox.text = lastDialogue.dial[line].text;
+                actualCharacter = lastDialogue.dial[line].text.Length;
+            }
         } else
         {
-            textBox.text = dialogues[dialogueId].dial[line].text;
-            actualCharacter = dialogues[dialogueId].dial[line].text.Length;
+            if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
+            {
+                CheckExpression(expression);
+                AddTextBox();
+            } else
+            {
+                textBox.text = dialogues[dialogueId].dial[line].text;
+                actualCharacter = dialogues[dialogueId].dial[line].text.Length;
+            }
         }
     }
 
     public void CheckExpression(bool expression)
     {
-        if (expression == dialogues[dialogueId].dial[line].mustLaugh)
+        if (dialogueId == dialogues.Length)
         {
-            //SendMessage("OnAddScore");
+            if (expression == lastDialogue.dial[line].mustLaugh)
+            {
+                SendMessage("OnAddScore");
+            } else
+            {
+                SendMessage("OnLoseLife");
+            }
         } else
         {
-            //SendMessage("OnLoseLife");
+            if (expression == dialogues[dialogueId].dial[line].mustLaugh)
+            {
+                SendMessage("OnAddScore");
+            } else
+            {
+                SendMessage("OnLoseLife");
+            }
         }
+        
     }
 
     public void NoExpression()
@@ -129,32 +181,32 @@ public class BlaBlaScript : MonoBehaviour
         AddTextBox();
     }
 
-    public void Scroll()
-    {
-        if (Input.mouseScrollDelta.y != 0)
-        {
-            textSpawn.GetComponent<Rigidbody2D>().AddForce(Input.mouseScrollDelta.y * scrollSpeed * Vector2.up, ForceMode2D.Impulse);
-        }
-        if (textSpawn.position.y > textDownLimit.position.y)
-        {
-            textSpawn.GetComponent<Rigidbody2D>().AddForce(scrollSpeed * Time.deltaTime * Vector2.Distance(textSpawn.position, textDownLimit.position) * -Vector2.up, ForceMode2D.Force);
-        } else if (InstanciatedTexts[0].position.y < textUpLimit.position.y)
-        {
-            textSpawn.GetComponent<Rigidbody2D>().AddForce(scrollSpeed * Time.deltaTime * Vector2.Distance(InstanciatedTexts[0].position, textUpLimit.position) * Vector2.up, ForceMode2D.Force);
-        }
-
-        
-    }
-
     public void AddTextBox()
     {
         actualCharacter = 0;
         
         line++;
-        if (line >= dialogues[dialogueId].dial.Length)
+        if (dialogueId == dialogues.Length)
+        {
+            if (line >= lastDialogue.dial.Length)
+            {
+                EndGame();
+                return;
+
+            }
+        } else if(line >= dialogues[dialogueId].dial.Length)
         {
             line = 0;
-            dialogueId = UnityEngine.Random.Range(1, dialogues.Length);
+            if (availableNumbers.Count > 0)
+            {
+                int newIndex = availableNumbers[UnityEngine.Random.Range(0, availableNumbers.Count)];
+                dialogueId = newIndex;
+                availableNumbers.Remove(newIndex);
+                availableNumbers.TrimExcess();
+            } else
+            {
+                dialogueId = dialogues.Length;
+            }
             isFinished = false;
         }
         InstanciatedTexts.Add(Instantiate(textObject, textSpawn.position, textSpawn.rotation, textSpawn).transform);
@@ -164,4 +216,10 @@ public class BlaBlaScript : MonoBehaviour
         scroller.normalizedPosition = new Vector2(0, 0);
         Canvas.ForceUpdateCanvases();
     }
+
+    public void EndGame()
+    {
+        print("EndGame");
+    }
+    #endregion
 }

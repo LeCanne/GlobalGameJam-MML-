@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +11,18 @@ public class GameValues : MonoBehaviour
 
     [Header ("NumericalValues")]
     public int playerLife;
-    private int Score;
     public float reactTime;
     private float leftTime;
     private bool canReact;
-    public bool ThereIsNoTimer;
+    private bool ThereIsNoTimer;
+
+    private void Start()
+    {
+        if (timeSlider == null)
+        {
+            ThereIsNoTimer = true;
+        }
+    }
 
     private void Update()
     {
@@ -45,7 +53,6 @@ public class GameValues : MonoBehaviour
 
     public void OnAddScore()
     {
-        Score++;
         canReact = false;
         if (!ThereIsNoTimer)
         {
