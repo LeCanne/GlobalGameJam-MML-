@@ -90,7 +90,7 @@ public class BlaBlaScript : MonoBehaviour
             actualCharacter++;
             textBox.text += dialogues[dialogueId].dial[line].text[actualCharacter - 1].ToString();
             typeLeftTime = TypingSpeed;
-            VoiceBoss.Play();
+            //VoiceBoss.Play();
             
         } else if (!finishedTalk)
         {
