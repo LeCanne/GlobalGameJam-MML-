@@ -121,6 +121,11 @@ public class BlaBlaScript : MonoBehaviour
         }
     }
 
+    public void NoExpression()
+    {
+        AddTextBox();
+    }
+
     public void Scroll()
     {
         if (Input.mouseScrollDelta.y != 0)
