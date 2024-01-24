@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public float amplitude = 50f; // Distance max sur laquelle la bouche peut être déplacée
-    private float initialYPos;
+    public float Amplitude = 50f; // Distance max sur laquelle la bouche peut être déplacée
+    [HideInInspector] public float InitialYPos;
     private float mouseYOffset; // Diff entre positions y de la souris et de la bouche (évite que la bouche se centre sur la souris)
     private bool dragging = false;
     public void OnBeginDrag(PointerEventData eventData)
@@ -18,7 +18,7 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = new Vector2(transform.position.x, Mathf.Clamp(Input.mousePosition.y - mouseYOffset,initialYPos - amplitude,initialYPos));
+        transform.position = new Vector2(transform.position.x, Mathf.Clamp(Input.mousePosition.y - mouseYOffset,InitialYPos - Amplitude,InitialYPos));
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -28,14 +28,14 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     void Start()
     {
-        initialYPos = transform.position.y;
+        InitialYPos = transform.position.y;
     }
 
     void Update()
     {
-        if (!dragging && transform.position.y != initialYPos) // La bouche reprend sa position d'origine lorsqu'elle n'est pas tirée
+        if (!dragging && transform.position.y != InitialYPos) // La bouche reprend sa position d'origine lorsqu'elle n'est pas tirée
         {
-            transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y + 2, initialYPos - amplitude, initialYPos));
+            transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y + 2, InitialYPos - Amplitude, InitialYPos));
         }
     }
 }
