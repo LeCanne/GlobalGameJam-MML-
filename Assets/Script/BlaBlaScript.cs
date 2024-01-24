@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -220,6 +221,7 @@ public class BlaBlaScript : MonoBehaviour
     public void EndGame()
     {
         print("EndGame");
+        enabled = false;
     }
     #endregion
 }

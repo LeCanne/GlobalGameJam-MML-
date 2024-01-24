@@ -22,6 +22,8 @@ public class LaughScript : MonoBehaviour
     [SerializeField] private float openY; // Pos Y où la bouche s'ouvrira
     [SerializeField] private float movements = 0f; // Augmente à chaque fois que la bouche passe d'ouverte à fermée et inversement
     [SerializeField] private float lastMoveTime = 0f; // Temps écoulé depuis le dernier mouvement
+    [SerializeField] private BlaBlaScript dialScript;
+
     void Start()
     {
         dragAndDropUI = GetComponent<DragAndDropUI>();
@@ -43,6 +45,7 @@ public class LaughScript : MonoBehaviour
         {
             movements += 1f;
             isOpen = false;
+            dialScript.OnExpression(true);
             lastMoveTime = Time.time;
         }
         if (movements >= MovementsToLaugh) // Rire

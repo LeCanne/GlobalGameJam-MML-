@@ -22,6 +22,7 @@ public class NodScript : MonoBehaviour
     [SerializeField] private float downY; // Pos Y où la tete sera basse
     [SerializeField] private float movements = 0f; // Augmente à chaque fois que la tete passe de haute à basse et inversement
     [SerializeField] private float lastMoveTime = 0f; // Temps écoulé depuis le dernier mouvement
+    [SerializeField] private BlaBlaScript dial;
     void Start()
     {
         dragAndDropUI = GetComponent<DragAndDropUI>();
@@ -38,6 +39,7 @@ public class NodScript : MonoBehaviour
             isDown = true;
             lastMoveTime = Time.time;
             audioSource.PlayOneShot(audioClip);
+            dial.OnExpression(false);
         }
         if (isDown && rectTransform.anchoredPosition.y >= upY) // Fermer
         {
