@@ -861,6 +861,10 @@ PrefabInstance:
       propertyPath: dial
       value: 
       objectReference: {fileID: 110663128}
+    - target: {fileID: 594102516431004861, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 2630689574552921824, guid: 259b11779d2a106429063a63886f1f07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -909,10 +913,18 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 846126063}
+    - target: {fileID: 6777710961791646714, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 846126063}
     - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
       propertyPath: dialScript
       value: 
       objectReference: {fileID: 110663128}
+    - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 519420033}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1500,7 +1512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
