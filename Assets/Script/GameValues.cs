@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class GameValues : MonoBehaviour
 {
@@ -39,7 +39,7 @@ public class GameValues : MonoBehaviour
         canReact = true;
         if (!ThereIsNoTimer)
         {
-            timeSlider.SetEnabled(true);
+            timeSlider.gameObject.SetActive(true);
         }
     }
 
@@ -49,7 +49,7 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.SetEnabled(false);
+            timeSlider.gameObject.SetActive(false);
         }
     }
 
@@ -59,7 +59,7 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.SetEnabled(false);
+            timeSlider.gameObject.SetActive(false);
         }
         if (playerLife <= 0)
         {
