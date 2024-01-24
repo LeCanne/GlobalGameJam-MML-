@@ -14,12 +14,16 @@ public class GameValues : MonoBehaviour
     public float reactTime;
     private float leftTime;
     private bool canReact;
+    public bool ThereIsNoTimer;
 
     private void Update()
     {
         if (canReact)
         {
-            timeSlider.value = 1 - leftTime / reactTime;
+            if (!ThereIsNoTimer)
+            {
+                timeSlider.value = 1 - leftTime / reactTime;
+            }
             leftTime -= Time.deltaTime;
             if (leftTime <= 0)
             {
@@ -33,20 +37,30 @@ public class GameValues : MonoBehaviour
     {
         leftTime = reactTime;
         canReact = true;
-        timeSlider.SetEnabled(true);
+        if (!ThereIsNoTimer)
+        {
+            timeSlider.SetEnabled(true);
+        }
     }
 
     public void OnAddScore()
     {
         Score++;
         canReact = false;
+        if (!ThereIsNoTimer)
+        {
+            timeSlider.SetEnabled(false);
+        }
     }
 
     public void OnLoseLife()
     {
         playerLife--;
         canReact = false;
-        timeSlider.SetEnabled(false);
+        if (!ThereIsNoTimer)
+        {
+            timeSlider.SetEnabled(false);
+        }
         if (playerLife <= 0)
         {
             //Die
