@@ -85,7 +85,7 @@ public class BlaBlaScript : MonoBehaviour
         } else if (!finishedTalk)
         {
             finishedTalk = true;
-            SendMessage("StartTimer", dialogues[dialogueId].mustLaugh[line]);
+            SendMessage("StartTimer");
         }
     }
 
