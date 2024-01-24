@@ -130,7 +130,7 @@ public class BlaBlaScript : MonoBehaviour
         if (line >= dialogues[dialogueId].texts.Length)
         {
             line = 0;
-            dialogueId = UnityEngine.Random.Range(0, dialogues.Length);
+            dialogueId = UnityEngine.Random.Range(1, dialogues.Length);
             isFinished = false;
         }
         InstanciatedTexts.Add(Instantiate(textObject, textSpawn.position, textSpawn.rotation, textSpawn).transform);

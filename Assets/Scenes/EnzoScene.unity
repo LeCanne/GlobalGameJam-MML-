@@ -1288,24 +1288,51 @@ MonoBehaviour:
   messagesSpacing: 200
   dialogues:
   - texts:
-    - Bonjour. Je suis le patron.
-    - "J'esp\xE8re que tu es pr\xEAt a devenir mon esclave"
+    - AH. You made it. I mean the restaurant is right next to the office...
+    - Would have been worrying if ya were not there.
+    - Don't worry I am paying for everything.
+    - Part of my money for my food...
+    - And part of your salary for yours. Hah.
+    - Anyways... We're here to talk promotion.
+    - You look man enough too. Not like those twinks at human resources.
+    - God I hate this man. His dog probably died or something, eh?
     mustLaugh: 0
   - texts:
-    - Michel m'a dit une chose l'autre fois
-    - "Il m'a dit que sa femme l'avait tromp\xE9."
-    - "Tout ce que je peux dire c'est qu'elle \xE9tait bonne."
+    - Here's something else. So, you've ever tried to direct a group of dumbasses?
+    - I do that every single day. Sometimes I lock my office door to not answer complaints.
+    - Like, who needs a lock on toilet stalls? How can I know you're not doing drugs
+      on company time?
+    - And if you're doing drugs, gimme some for christ's sake!
+    - Some of the complaints can get very unhinged.
+    - 'Like listen: "Oh I got into a car accident"'
+    - USE YOUR LEGS BUCKO! I am not paying for your mistake!
+    - Like what's next, "I want a poney?"
     mustLaugh: 0
   - texts:
-    - It's never too late
-    - "pour se faire de l'argent sur le dos des employ\xE9s."
+    - Oh wait I got somethin' else. I ain't got the best vision but when looking
+      into the mirror I can see my hairs.
+    - Helped me in pulling some ladies over. Unfortunaly for 'em I am married. To
+      business.
+    - Last time I was in a relation uh... Well.
+    - Let's take my wife. Lovely lady. Independent worker and everything.
+    - Well uh, she left me. Apparently I was "A big fucking idiot".
+    - I don't know what her deal was. Could've sworn I made MY SIDE of the bed.
+    - The hell do you want me to do woman? Do your side of the bed too?.
     mustLaugh: 0
   - texts:
-    - Breaking. Breaking. My heart. My heart.
-    - QUAND LES PEPETTES NE RENTRENT PAS
-    mustLaugh: 0
-  - texts:
-    - Vive le capitalisme !!!
+    - Ey, you listen to music sometimes?  Yeah, you have a face that looks like you
+      do.
+    - I tried to get into something called "Blackcore Banjo"
+    - Didn't know farmers were into the devil. I mean the guy's pretty cool but uh...
+    - Aaaanyway. The only music I can tolerate in the office buildings is the smooth
+      sound of keyboards.
+    - That's a great instrument. Shows you're doing somethin' useful instead of being
+      uh, an asshat.
+    - That's a great instrument. Shows you're doing somethin' useful instead of being
+      uh, an asshat.
+    - Yeah I think musicians are asshats, you thought I would I think otherwise?
+    - Imagine getting paid for like, pulling strings. I can do that too you know.
+    - I do it with the board of directors everyday, see what I mean?
     mustLaugh: 0
   TypingSpeed: 0.05
 --- !u!114 &2107795834
