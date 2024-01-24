@@ -217,7 +217,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1919052606}
   - {fileID: 835076463}
   - {fileID: 214575226}
   - {fileID: 800214563}
@@ -804,7 +803,6 @@ GameObject:
   - component: {fileID: 992893978}
   - component: {fileID: 992893977}
   - component: {fileID: 992893981}
-  - component: {fileID: 992893980}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -886,20 +884,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &992893980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992893976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d4358ba9be36b4299f6035baf04aa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLife: 3
-  reactTime: 5
 --- !u!114 &992893981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,112 +1165,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1919052605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1919052606}
-  - component: {fileID: 1919052607}
-  - component: {fileID: 1919052609}
-  - component: {fileID: 1919052608}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1919052606
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919052605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8000829}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 720, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1919052607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919052605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Content: {fileID: 2107795831}
-  m_Horizontal: 0
-  m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 0}
-  m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 0}
-  m_HorizontalScrollbarVisibility: 0
-  m_VerticalScrollbarVisibility: 0
-  m_HorizontalScrollbarSpacing: 0
-  m_VerticalScrollbarSpacing: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1919052608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919052605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1919052609
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919052605}
-  m_CullTransparentMesh: 1
 --- !u!1 &2107795830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1179,7 @@ GameObject:
   - component: {fileID: 2107795833}
   - component: {fileID: 2107795836}
   - component: {fileID: 2107795837}
+  - component: {fileID: 2107795838}
   m_Layer: 5
   m_Name: DialogueSpawn
   m_TagString: Untagged
@@ -1347,53 +1226,14 @@ MonoBehaviour:
   scrollSpeed: 500
   messagesSpacing: 200
   dialogues:
-  - texts:
-    - AH. You made it. I mean the restaurant is right next to the office...
-    - Would have been worrying if ya were not there.
-    - Don't worry I am paying for everything.
-    - Part of my money for my food...
-    - And part of your salary for yours. Hah.
-    - Anyways... We're here to talk promotion.
-    - You look man enough too. Not like those twinks at human resources.
-    - God I hate this man. His dog probably died or something, eh?
-    mustLaugh: 
-  - texts:
-    - Here's something else. So, you've ever tried to direct a group of dumbasses?
-    - I do that every single day. Sometimes I lock my office door to not answer complaints.
-    - Like, who needs a lock on toilet stalls? How can I know you're not doing drugs
-      on company time?
-    - And if you're doing drugs, gimme some for christ's sake!
-    - Some of the complaints can get very unhinged.
-    - 'Like listen: "Oh I got into a car accident"'
-    - USE YOUR LEGS BUCKO! I am not paying for your mistake!
-    - Like what's next, "I want a poney?"
-    mustLaugh: 
-  - texts:
-    - Oh wait I got somethin' else. I ain't got the best vision but when looking
-      into the mirror I can see my hairs.
-    - Helped me in pulling some ladies over. Unfortunaly for 'em I am married. To
-      business.
-    - Last time I was in a relation uh... Well.
-    - Let's take my wife. Lovely lady. Independent worker and everything.
-    - Well uh, she left me. Apparently I was "A big fucking idiot".
-    - I don't know what her deal was. Could've sworn I made MY SIDE of the bed.
-    - The hell do you want me to do woman? Do your side of the bed too?.
-    mustLaugh: 
-  - texts:
-    - Ey, you listen to music sometimes?  Yeah, you have a face that looks like you
-      do.
-    - I tried to get into something called "Blackcore Banjo"
-    - Didn't know farmers were into the devil. I mean the guy's pretty cool but uh...
-    - Aaaanyway. The only music I can tolerate in the office buildings is the smooth
-      sound of keyboards.
-    - That's a great instrument. Shows you're doing somethin' useful instead of being
-      uh, an asshat.
-    - That's a great instrument. Shows you're doing somethin' useful instead of being
-      uh, an asshat.
-    - Yeah I think musicians are asshats, you thought I would I think otherwise?
-    - Imagine getting paid for like, pulling strings. I can do that too you know.
-    - I do it with the board of directors everyday, see what I mean?
-    mustLaugh: 
+  - dial:
+    - text: Hello
+      mustLaugh: 0
+    - text: I'm under the water
+      mustLaugh: 0
+  - dial:
+    - text: please send help
+      mustLaugh: 0
   TypingSpeed: 0.05
 --- !u!114 &2107795834
 MonoBehaviour:
@@ -1473,6 +1313,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &2107795838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107795830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d4358ba9be36b4299f6035baf04aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLife: 3
+  reactTime: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -26,8 +27,14 @@ public class BlaBlaScript : MonoBehaviour
     [System.Serializable]
     public class Dialogue
     {
-        public string[] texts;
-        public bool[] mustLaugh;
+        public SingleDial[] dial;
+    }
+
+    [System.Serializable]
+    public class SingleDial
+    {
+        public string text;
+        public bool mustLaugh;
     }
 
     public Dialogue[] dialogues;
@@ -76,11 +83,11 @@ public class BlaBlaScript : MonoBehaviour
 
     public void ProgressInText ()
     {
-        if (actualCharacter < dialogues[dialogueId].texts[line].Length)
+        if (actualCharacter < dialogues[dialogueId].dial[line].text.Length)
         {
             finishedTalk = false;
             actualCharacter++;
-            textBox.text += dialogues[dialogueId].texts[line][actualCharacter - 1].ToString();
+            textBox.text += dialogues[dialogueId].dial[line].text[actualCharacter - 1].ToString();
             typeLeftTime = TypingSpeed;
         } else if (!finishedTalk)
         {
@@ -92,20 +99,20 @@ public class BlaBlaScript : MonoBehaviour
     public void OnExpression(bool expression)
     {
         buttonPressed = true;
-        if (actualCharacter == dialogues[dialogueId].texts[line].Length)
+        if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
         {
             CheckExpression(expression);
             AddTextBox();
         } else
         {
-            textBox.text = dialogues[dialogueId].texts[line];
-            actualCharacter = dialogues[dialogueId].texts[line].Length;
+            textBox.text = dialogues[dialogueId].dial[line].text;
+            actualCharacter = dialogues[dialogueId].dial[line].text.Length;
         }
     }
 
     public void CheckExpression(bool expression)
     {
-        if (expression == dialogues[dialogueId].mustLaugh[dialogueId])
+        if (expression == dialogues[dialogueId].dial[line].mustLaugh)
         {
             SendMessage("OnAddScore");
         } else
@@ -136,7 +143,7 @@ public class BlaBlaScript : MonoBehaviour
         actualCharacter = 0;
         
         line++;
-        if (line >= dialogues[dialogueId].texts.Length)
+        if (line >= dialogues[dialogueId].dial.Length)
         {
             line = 0;
             dialogueId = UnityEngine.Random.Range(1, dialogues.Length);
