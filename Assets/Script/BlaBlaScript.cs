@@ -19,6 +19,7 @@ public class BlaBlaScript : MonoBehaviour
     public float scrollSpeed;
     private readonly List<Transform> InstanciatedTexts = new();
     public float messagesSpacing;
+    private bool finishedTalk;
     #endregion
 
     #region TextRegion
@@ -26,7 +27,7 @@ public class BlaBlaScript : MonoBehaviour
     public class Dialogue
     {
         public string[] texts;
-        public bool mustLaugh;
+        public bool[] mustLaugh;
     }
 
     public Dialogue[] dialogues;
@@ -58,42 +59,58 @@ public class BlaBlaScript : MonoBehaviour
             {
                 typeLeftTime -= Time.deltaTime;
             }
-
-            CheckInputs();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if (!buttonPressed)
+                {
+                    OnExpression(false);
+                }
+            } else
+            {
+                buttonPressed = false;
+            }
+            
         }
         //Scroll();
     }
 
     public void ProgressInText ()
     {
-        if (actualCharacter != dialogues[dialogueId].texts[line].Length)
+        if (actualCharacter < dialogues[dialogueId].texts[line].Length)
         {
+            finishedTalk = false;
             actualCharacter++;
             textBox.text += dialogues[dialogueId].texts[line][actualCharacter - 1].ToString();
             typeLeftTime = TypingSpeed;
+        } else if (!finishedTalk)
+        {
+            finishedTalk = true;
+            SendMessage("StartTimer", dialogues[dialogueId].mustLaugh[line]);
         }
     }
 
-    public void CheckInputs()
+    public void OnExpression(bool expression)
     {
-        if (Input.GetKey(KeyCode.Space))
+        buttonPressed = true;
+        if (actualCharacter == dialogues[dialogueId].texts[line].Length)
         {
-            if (!buttonPressed)
-            {
-                buttonPressed = true;
-                if (actualCharacter == dialogues[dialogueId].texts[line].Length)
-                {
-                    AddTextBox();
-                } else
-                {
-                    textBox.text = dialogues[dialogueId].texts[line];
-                    actualCharacter = dialogues[dialogueId].texts[line].Length;
-                }
-
-            }
+            CheckExpression(expression);
+            AddTextBox();
         } else
         {
-            buttonPressed = false;
+            textBox.text = dialogues[dialogueId].texts[line];
+            actualCharacter = dialogues[dialogueId].texts[line].Length;
+        }
+    }
+
+    public void CheckExpression(bool expression)
+    {
+        if (expression == dialogues[dialogueId].mustLaugh[dialogueId])
+        {
+            SendMessage("OnAddScore");
+        } else
+        {
+            SendMessage("OnLoseLife");
         }
     }
 
@@ -117,14 +134,6 @@ public class BlaBlaScript : MonoBehaviour
     public void AddTextBox()
     {
         actualCharacter = 0;
-        
-        /*if (InstanciatedTexts.Count > 0)
-        {
-            for (int i = 0; i < InstanciatedTexts.Count; i++)
-            {
-                InstanciatedTexts[i].position += Vector3.up * messagesSpacing;
-            }
-        }*/
         
         line++;
         if (line >= dialogues[dialogueId].texts.Length)
