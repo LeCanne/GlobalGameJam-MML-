@@ -116,7 +116,7 @@ public class BlaBlaScript : MonoBehaviour
             {
                 CheckExpression(expression);
                 AddTextBox();
-            } else
+            } else if (!expression)
             {
                 textBox.text = dialogues[dialogueId].dial[line].text;
                 actualCharacter = dialogues[dialogueId].dial[line].text.Length;

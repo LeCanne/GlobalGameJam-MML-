@@ -25,6 +25,9 @@ public class GameValues : MonoBehaviour
         if (timeSlider == null)
         {
             ThereIsNoTimer = true;
+        } else
+        {
+            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(false);
         }
 
         if (scoreText == null)
@@ -39,7 +42,7 @@ public class GameValues : MonoBehaviour
         {
             if (!ThereIsNoTimer)
             {
-                timeSlider.value = 1 - leftTime / reactTime;
+                timeSlider.value = leftTime / reactTime;
             }
             leftTime -= Time.deltaTime;
             if (leftTime <= 0)
@@ -56,7 +59,7 @@ public class GameValues : MonoBehaviour
         canReact = true;
         if (!ThereIsNoTimer)
         {
-            timeSlider.transform.parent.gameObject.SetActive(true);
+            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(true);
         }
     }
 
@@ -66,7 +69,7 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.transform.parent.gameObject.SetActive(false);
+            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(false);
         }
         if(!ThereIsNoScore)
         {
@@ -80,7 +83,7 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.transform.parent.gameObject.SetActive(false);
+            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(false);
         }
         if (playerLife <= 0)
         {
