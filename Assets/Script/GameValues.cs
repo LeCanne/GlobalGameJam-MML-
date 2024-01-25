@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,19 +9,27 @@ public class GameValues : MonoBehaviour
 {
     [Header("References")]
     public Slider timeSlider;
+    public TextMeshProUGUI scoreText;
 
     [Header ("NumericalValues")]
     public int playerLife;
+    private int playerScore;
     public float reactTime;
     private float leftTime;
     private bool canReact;
     private bool ThereIsNoTimer;
+    private bool ThereIsNoScore;
 
     private void Start()
     {
         if (timeSlider == null)
         {
             ThereIsNoTimer = true;
+        }
+
+        if (scoreText == null)
+        {
+            ThereIsNoScore = true;
         }
     }
 
@@ -47,16 +56,21 @@ public class GameValues : MonoBehaviour
         canReact = true;
         if (!ThereIsNoTimer)
         {
-            timeSlider.gameObject.SetActive(true);
+            timeSlider.transform.parent.gameObject.SetActive(true);
         }
     }
 
     public void OnAddScore()
     {
+        playerScore++;
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.gameObject.SetActive(false);
+            timeSlider.transform.parent.gameObject.SetActive(false);
+        }
+        if(!ThereIsNoScore)
+        {
+            scoreText.text = playerScore.ToString();
         }
     }
 
@@ -66,7 +80,7 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.gameObject.SetActive(false);
+            timeSlider.transform.parent.gameObject.SetActive(false);
         }
         if (playerLife <= 0)
         {
