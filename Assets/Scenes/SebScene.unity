@@ -466,6 +466,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 679997297}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: playerAnims
+      value: 
+      objectReference: {fileID: 1878607518}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: bossPitchRange.x
       value: 0.95
       objectReference: {fileID: 0}
@@ -729,6 +733,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[3].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.data[7].mustLaugh
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
@@ -3399,6 +3407,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803012100}
   m_CullTransparentMesh: 1
+--- !u!95 &1878607518 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1812686113095855639, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+  m_PrefabInstance: {fileID: 345639155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1955451436
 GameObject:
   m_ObjectHideFlags: 0
