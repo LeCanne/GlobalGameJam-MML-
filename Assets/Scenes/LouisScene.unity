@@ -2277,6 +2277,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: IsLaughing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
       propertyPath: dialScript
       value: 
       objectReference: {fileID: 2101988198}
@@ -2284,6 +2288,14 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 432270518}
+    - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: PitchRange.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: PitchRange.y
+      value: 1.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
