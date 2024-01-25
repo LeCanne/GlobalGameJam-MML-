@@ -27,7 +27,13 @@ public class GameValues : MonoBehaviour
             ThereIsNoTimer = true;
         } else
         {
-            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(false);
+            foreach(RectTransform child in timeSlider.GetComponent<RectTransform>().parent.parent)
+            {
+                if (child.TryGetComponent<Animator> (out Animator anim))
+                {
+                    anim.SetTrigger("Closed");
+                }
+            }
         }
 
         if (scoreText == null)
@@ -59,7 +65,13 @@ public class GameValues : MonoBehaviour
         canReact = true;
         if (!ThereIsNoTimer)
         {
-            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(true);
+            foreach (RectTransform child in timeSlider.GetComponent<RectTransform>().parent.parent)
+            {
+                if (child.TryGetComponent<Animator>(out Animator anim))
+                {
+                    anim.SetTrigger("Spawn");
+                }
+            }
         }
     }
 
@@ -69,7 +81,13 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(false);
+            foreach (RectTransform child in timeSlider.GetComponent<RectTransform>().parent.parent)
+            {
+                if (child.TryGetComponent<Animator>(out Animator anim))
+                {
+                    anim.SetTrigger("Closed");
+                }
+            }
         }
         if(!ThereIsNoScore)
         {
