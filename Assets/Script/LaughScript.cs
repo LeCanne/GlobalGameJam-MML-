@@ -60,7 +60,8 @@ public class LaughScript : MonoBehaviour
         if (IsLaughing)
         {
             dialScript.OnExpression(true);
-            movements = 0;
+            movements = 0f;
+            IsLaughing = false;
         }
     }
 }
