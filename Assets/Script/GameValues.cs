@@ -73,7 +73,7 @@ public class GameValues : MonoBehaviour
         }
         if(!ThereIsNoScore)
         {
-            scoreText.text = playerScore.ToString();
+            scoreText.text = (playerScore * 1000).ToString();
         }
     }
 
