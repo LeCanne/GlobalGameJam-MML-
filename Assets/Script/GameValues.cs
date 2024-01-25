@@ -101,7 +101,13 @@ public class GameValues : MonoBehaviour
         canReact = false;
         if (!ThereIsNoTimer)
         {
-            timeSlider.GetComponent<RectTransform>().parent.parent.gameObject.SetActive(false);
+            foreach (RectTransform child in timeSlider.GetComponent<RectTransform>().parent.parent)
+            {
+                if (child.TryGetComponent<Animator>(out Animator anim))
+                {
+                    anim.SetTrigger("Closed");
+                }
+            }
         }
         if (playerLife <= 0)
         {

@@ -72,7 +72,6 @@ public class BlaBlaScript : MonoBehaviour
         line = -1;
         AddTextBox();
         bossAnims.SetTrigger("To_Idle");
-        bossAnims.SetTrigger("To_Not_Turn");
     }
 
     private void Update()
@@ -131,7 +130,7 @@ public class BlaBlaScript : MonoBehaviour
             {
                 SendMessage("OnAddScore");
                 bossAnims.SetTrigger("To_Laugh");
-                bossAnims.SetTrigger("To_Win");
+                playerAnims.SetTrigger("To_Win");
             } else
             {
                 SendMessage("OnLoseLife");
