@@ -64,7 +64,7 @@ public class BlaBlaScript : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 1; i < dialogues.Length - 2; i++)
+        for (int i = 2; i < dialogues.Length - 2; i++)
         {
             availableNumbers.Add(i);
         }
@@ -72,6 +72,7 @@ public class BlaBlaScript : MonoBehaviour
         line = -1;
         AddTextBox();
         bossAnims.SetTrigger("To_Idle");
+        bossAnims.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -104,7 +105,13 @@ public class BlaBlaScript : MonoBehaviour
         } else if (!finishedTalk)
         {
             finishedTalk = true;
-            SendMessage("StartTimer");
+            if(dialogueId != 0)
+            {
+                SendMessage("StartTimer");
+            } else if (line == 0 || line == 2)
+            {
+                OnExpression(false);
+            }
         }
     }
 
@@ -125,6 +132,7 @@ public class BlaBlaScript : MonoBehaviour
 
     public void CheckExpression(bool expression)
     {
+        if(dialogueId > 0)
         {
             if (expression == dialogues[dialogueId].dial[line].mustLaugh)
             {
@@ -158,9 +166,13 @@ public class BlaBlaScript : MonoBehaviour
                 EndGame();
                 return;
 
-            }
+            } 
             line = 0;
-            if (availableNumbers.Count > 0)
+            if (dialogueId == 0)
+            {
+                dialogueId = 1;
+                bossAnims.gameObject.SetActive(true);
+            }else if (availableNumbers.Count > 0)
             {
                 int newIndex = availableNumbers[UnityEngine.Random.Range(0, availableNumbers.Count)];
                 dialogueId = newIndex;
