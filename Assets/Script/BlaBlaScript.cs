@@ -131,6 +131,9 @@ public class BlaBlaScript : MonoBehaviour
                 {
                     AddTextBox();
                 }
+            } else if (dialogueId > dialogues.Length - 2)
+            {
+                AddTextBox();
             } else
             {
                 CheckExpression(expression);
@@ -176,9 +179,9 @@ public class BlaBlaScript : MonoBehaviour
         {
             if (dialogueId >= dialogues.Length - 2)
             {
+                print(line);
                 EndGame();
                 return;
-
             } 
             line = 0;
             if (dialogueId == 0)
@@ -196,9 +199,11 @@ public class BlaBlaScript : MonoBehaviour
                 if (isDead)
                 {
                     dialogueId = dialogues.Length - 2;
+                    line = 0;
                 } else
                 {
                     dialogueId = dialogues.Length - 1;
+                    line = 0;
                 }
             }
             isFinished = false;
@@ -213,8 +218,12 @@ public class BlaBlaScript : MonoBehaviour
 
     public void DieNow()
     {
-        isDead = true;
-        availableNumbers.Clear();
+        if (!isDead)
+        {
+            isDead = true;
+            availableNumbers.Clear();
+            line = 100;
+        }
     }
 
     public void EndGame()
