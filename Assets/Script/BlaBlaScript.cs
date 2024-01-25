@@ -117,16 +117,29 @@ public class BlaBlaScript : MonoBehaviour
 
     public void OnExpression(bool expression)
     {
+        if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
         {
-            if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
+            if (dialogueId == 0 && line == 1)
+            {
+                if (expression)
+                {
+                    AddTextBox();
+                }
+            } else if (dialogueId == 0 && line == 3)
+            {
+                if (!expression)
+                {
+                    AddTextBox();
+                }
+            } else
             {
                 CheckExpression(expression);
                 AddTextBox();
-            } else if (!expression)
-            {
-                textBox.text = dialogues[dialogueId].dial[line].text;
-                actualCharacter = dialogues[dialogueId].dial[line].text.Length;
             }
+        } else if (!expression)
+        {
+            textBox.text = dialogues[dialogueId].dial[line].text;
+            actualCharacter = dialogues[dialogueId].dial[line].text.Length;
         }
     }
 
