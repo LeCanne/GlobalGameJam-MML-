@@ -52,7 +52,12 @@ public class BlaBlaScript : MonoBehaviour
     private float typeLeftTime;
     private bool isFinished;
     private bool isDead;
+    #endregion
+
+    #region Autres
+    [SerializeField] private Animator bossAnims;
     [SerializeField] private AudioSource VoiceBoss;
+    [SerializeField] private Vector2 bossPitchRange;
     #endregion
 
     private void Start()
@@ -64,6 +69,7 @@ public class BlaBlaScript : MonoBehaviour
         dialogueId = 0;
         line = -1;
         AddTextBox();
+        bossAnims.SetTrigger("To_Idle");
     }
 
     private void Update()
@@ -77,16 +83,6 @@ public class BlaBlaScript : MonoBehaviour
             {
                 typeLeftTime -= Time.deltaTime;
             }
-            /*if (Input.GetKey(KeyCode.Space))
-            {
-                if (!buttonPressed)
-                {
-                    OnExpression(false);
-                }
-            } else
-            {
-                buttonPressed = false;
-            }*/
         }
     }
 
@@ -100,6 +96,7 @@ public class BlaBlaScript : MonoBehaviour
             actualCharacter++;
             textBox.text += dialogues[dialogueId].dial[line].text[actualCharacter - 1].ToString();
             typeLeftTime = TypingSpeed;
+            VoiceBoss.pitch = UnityEngine.Random.Range(bossPitchRange.x, bossPitchRange.y);
             VoiceBoss.Play();
 
         } else if (!finishedTalk)
@@ -130,9 +127,11 @@ public class BlaBlaScript : MonoBehaviour
             if (expression == dialogues[dialogueId].dial[line].mustLaugh)
             {
                 SendMessage("OnAddScore");
+                bossAnims.SetTrigger("To_Laugh");
             } else
             {
                 SendMessage("OnLoseLife");
+                bossAnims.SetTrigger("To_Cringed");
             }
         }
         
