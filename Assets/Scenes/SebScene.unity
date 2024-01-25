@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scroll View
       objectReference: {fileID: 0}
+    - target: {fileID: 731987756406415344, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: m_Spacing
+      value: 12.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2611232446733841095, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: m_Color.a
       value: 0.003921569
