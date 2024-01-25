@@ -10,6 +10,7 @@ public class GameValues : MonoBehaviour
     [Header("References")]
     public Slider timeSlider;
     public TextMeshProUGUI scoreText;
+    public Animator[] lifeAnims;
 
     [Header ("NumericalValues")]
     public int playerLife;
@@ -106,6 +107,14 @@ public class GameValues : MonoBehaviour
                 if (child.TryGetComponent<Animator>(out Animator anim))
                 {
                     anim.SetTrigger("Closed");
+                }
+            }
+
+            for (int i = 0; i < lifeAnims.Length; i++)
+            {
+                if (i >= playerLife)
+                {
+                    lifeAnims[i].SetTrigger("Lost");
                 }
             }
         }
