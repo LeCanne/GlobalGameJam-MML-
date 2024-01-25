@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static BlaBlaScript;
@@ -60,6 +61,8 @@ public class BlaBlaScript : MonoBehaviour
     [SerializeField] private AudioSource VoiceBoss;
     [SerializeField] private Vector2 bossPitchRange;
     [SerializeField] private UnityEngine.UI.Image blackImage;
+    [SerializeField] private UnityEngine.UI.Image win;
+    [SerializeField] private UnityEngine.UI.Image lose;
     #endregion
 
     private void Start()
@@ -235,6 +238,16 @@ public class BlaBlaScript : MonoBehaviour
 
     IEnumerator Transiscreen()
     {
+        if (isDead == true)
+        {
+            lose.gameObject.SetActive(true);
+        }
+        else
+        {
+            win.gameObject.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(5);
         Color color = blackImage.color;
         for (int i = 0; i < 30; i++)
         {
@@ -242,15 +255,10 @@ public class BlaBlaScript : MonoBehaviour
             blackImage.color = color;
             yield return new WaitForSeconds(0.1f);
         }
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
 
-        if (isDead)
-        {
-            //ecrandemort
-        }
-        else
-        {
-            //ecrandewin
-        }
+       
 
     }
     #endregion

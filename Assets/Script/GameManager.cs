@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         if (updateTransition == true)
         {
-            StartGame(0);
+            StartGame(1);
         }
        
     }
