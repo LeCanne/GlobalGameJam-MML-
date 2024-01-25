@@ -507,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[2].text
-      value: Don't worry I am paying for everything.
+      value: Don't worry, I'll pay for everything.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[3].text
@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[7].text
-      value: You look man enough too. Not like this Human Resources guy.
+      value: You look manly enough too. Not like this Human Resources guy.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[8].text
@@ -544,8 +544,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[1].text
-      value: I do that every single day. Sometimes I lock my office door to not answer
-        complaints.
+      value: I do that every single day. Sometimes I even lock my office door to
+        not answer complaints.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[2].text
@@ -562,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[5].text
-      value: 'Like listen: "Oh I got into a car accident"'
+      value: '"Oh, I got into a car accident !"'
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[6].text
@@ -570,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[7].text
-      value: Like what's next, "I want a poney?"
+      value: Like what's next, "I want a pony?"
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[2].dial.Array.data[0].text
@@ -604,12 +604,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[0].text
-      value: Ey, you listen to music sometimes?  Yeah, you have a face that looks
-        like you do.
+      value: Ey, you listen to music sometimes?  Yeah, you have the face of someone
+        who would.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[1].text
-      value: I tried to get into something called "Blackcore Banjo"
+      value: I tried to get into this thing called "Blackcore Banjo"
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[2].text
@@ -628,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[5].text
-      value: Yeah I think musicians are obsolete, you thought I would I think otherwise?
+      value: Yeah I think musicians are obsolete, you thought I would think otherwise?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[6].text
@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[4].text
-      value: But I am considering getting you a plant in a pot.
+      value: But I am considering getting you a potted plant
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[5].text
