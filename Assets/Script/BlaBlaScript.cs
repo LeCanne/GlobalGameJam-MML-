@@ -56,6 +56,7 @@ public class BlaBlaScript : MonoBehaviour
 
     #region Autres
     [SerializeField] private Animator bossAnims;
+    [SerializeField] private Animator playerAnims;
     [SerializeField] private AudioSource VoiceBoss;
     [SerializeField] private Vector2 bossPitchRange;
     #endregion
@@ -70,6 +71,7 @@ public class BlaBlaScript : MonoBehaviour
         line = -1;
         AddTextBox();
         bossAnims.SetTrigger("To_Idle");
+        bossAnims.SetTrigger("To_Not_Turn");
     }
 
     private void Update()
@@ -128,10 +130,12 @@ public class BlaBlaScript : MonoBehaviour
             {
                 SendMessage("OnAddScore");
                 bossAnims.SetTrigger("To_Laugh");
+                bossAnims.SetTrigger("To_Win");
             } else
             {
                 SendMessage("OnLoseLife");
                 bossAnims.SetTrigger("To_Cringed");
+                playerAnims.SetTrigger("To_Lose");
             }
         }
         
