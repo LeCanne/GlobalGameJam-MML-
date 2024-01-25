@@ -16,6 +16,7 @@ public class NodScript : MonoBehaviour
     public float MovementResetTime = 3f; // Temps pour que le nombre de mouvements reset (si aucun n'est effectué)
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public Vector2 PitchRange = new Vector2(0.95f, 1.05f); // Variation du pitch du nod
     public bool IsNodding = false; // Nod
     [SerializeField] private bool isDown = false; // Tete basse
     [SerializeField] private float upY; // Pos Y où la tete sera haute
@@ -38,6 +39,7 @@ public class NodScript : MonoBehaviour
             movements += 1f;
             isDown = true;
             lastMoveTime = Time.time;
+            audioSource.pitch = Random.Range(PitchRange.x, PitchRange.y);
             audioSource.PlayOneShot(audioClip);
             dial.OnExpression(false);
         }
