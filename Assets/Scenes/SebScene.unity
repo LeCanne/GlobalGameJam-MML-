@@ -499,51 +499,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.size
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[2].dial.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.size
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.size
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[0].text
-      value: AH. You made it. I mean the restaurant is right next to the office...
+      value: The boss is coming!
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[1].text
-      value: Would have been worrying if ya were not there.
+      value: Quick! Click your mouth and drag it down multiple time!
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[2].text
-      value: Don't worry, I'll pay for everything.
+      value: Nice laugh! You're going to have to laugh to the boss's jokes...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[3].text
-      value: Part of my money for my food...
+      value: Try to nod down, do the same thing but click your head.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[4].text
-      value: And part of your salary for yours. Hah.
+      value: NICE! Okay, he's coming now. Don't laugh too much..
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[5].text
-      value: Anyways... We're here to talk promotion.
+      value: Try to guess when he's joking, and only nod when there is no joke.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[6].text
@@ -564,100 +568,104 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[0].text
-      value: Here's something else. So, you've ever tried to direct a group of imbeciles?
+      value: AH. You made it. I mean the restaurant is right next to the office...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[1].text
+      value: Would have been worrying if ya were not there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[2].text
+      value: Don't worry, I'll pay for everything.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[3].text
+      value: Part of my money for my food...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[4].text
+      value: And part of your salary for yours. Hah.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[5].text
+      value: Anyways... We're here to talk promotion.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[6].text
+      value: And you look capable enough to get one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[7].text
+      value: You look manly enough too. Not like this Human Resources guy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[8].text
+      value: God I hate this guy, always so mad. His dog probably died or something,
+        eh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[0].text
+      value: Here's something else. So, you've ever tried to direct a group of imbeciles?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[1].text
       value: I do that every single day. Sometimes I even lock my office door to
         not answer complaints.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[1].dial.Array.data[2].text
+      propertyPath: dialogues.Array.data[2].dial.Array.data[2].text
       value: Like, who needs a lock on toilet stalls? How can I know you're not doing
         drugs on company time?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[1].dial.Array.data[3].text
+      propertyPath: dialogues.Array.data[2].dial.Array.data[3].text
       value: And if you're doing drugs, gimme some for christ's sake!
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[1].dial.Array.data[4].text
+      propertyPath: dialogues.Array.data[2].dial.Array.data[4].text
       value: Some of the complaints can get very unhinged.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[1].dial.Array.data[5].text
+      propertyPath: dialogues.Array.data[2].dial.Array.data[5].text
       value: '"Oh, I got into a car accident !"'
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[1].dial.Array.data[6].text
+      propertyPath: dialogues.Array.data[2].dial.Array.data[6].text
       value: USE YOUR LEGS BUCKO! I am not paying for your mistake!
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[1].dial.Array.data[7].text
+      propertyPath: dialogues.Array.data[2].dial.Array.data[7].text
       value: Like what's next, "I want a pony?"
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[0].text
+      propertyPath: dialogues.Array.data[3].dial.Array.data[0].text
       value: Oh wait I got somethin' else. I ain't got the best vision but when looking
         into the mirror I can see my hair.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[1].text
+      propertyPath: dialogues.Array.data[3].dial.Array.data[1].text
       value: Helped me pull some ladies. Unfortunaly for 'em I am married. To business.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[2].text
+      propertyPath: dialogues.Array.data[3].dial.Array.data[2].text
       value: Last time I was in a relation uh... Well.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[3].text
+      propertyPath: dialogues.Array.data[3].dial.Array.data[3].text
       value: Let's take my wife. Lovely lady. Independent worker and everything.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[4].text
+      propertyPath: dialogues.Array.data[3].dial.Array.data[4].text
       value: Well uh, she left me. Apparently I was "A goddamn idiot".
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[5].text
+      propertyPath: dialogues.Array.data[3].dial.Array.data[5].text
       value: I don't know what her deal was. Could've sworn I made MY SIDE of the
         bed.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[2].dial.Array.data[6].text
-      value: The hell do you want me to do woman? Do your side of the bed too?
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.data[0].text
-      value: Ey, you listen to music sometimes?  Yeah, you have the face of someone
-        who would.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.data[1].text
-      value: I tried to get into this thing called "Blackcore Banjo"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.data[2].text
-      value: Didn't know farmers were into the devil. I mean the guy's pretty cool
-        but uh...
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.data[3].text
-      value: Aaaanyway. The only music I can tolerate in the office buildings is
-        the smooth sound of keyboards.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.data[4].text
-      value: That's a great instrument. Shows you're doing somethin' useful instead
-        of being uh, obsolete.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[3].dial.Array.data[5].text
-      value: Yeah I think musicians are obsolete, you thought I would think otherwise?
-      objectReference: {fileID: 0}
-    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[6].text
-      value: Imagine getting paid for like, pulling strings. I can do that too you
-        know.
+      value: The hell do you want me to do woman? Do your side of the bed too?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[7].text
@@ -665,51 +673,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[0].text
-      value: Am I a joke to you?
+      value: Ey, you listen to music sometimes?  Yeah, you have the face of someone
+        who would.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[1].text
-      value: AND YOU'RE NODDING?!
+      value: I tried to get into this thing called "Blackcore Banjo"
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[2].text
-      value: '''Aight that''s enough, you''re gonna leave your computer at work tomorrow.'
+      value: Didn't know farmers were into the devil. I mean the guy's pretty cool
+        but uh...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[3].text
-      value: That'll surely teach you about how to respect your elders.
+      value: Aaaanyway. The only music I can tolerate in the office buildings is
+        the smooth sound of keyboards.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[4].text
-      value: Goddamn kids...
+      value: That's a great instrument. Shows you're doing somethin' useful instead
+        of being uh, obsolete.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[5].text
-      value: Goddamn kids...
+      value: Yeah I think musicians are obsolete, you thought I would think otherwise?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[4].dial.Array.data[6].text
-      value: please send help
+      value: Imagine getting paid for like, pulling strings. I can do that too you
+        know.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[7].text
+      value: I do it with the board of directors everyday, see what I mean?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[0].text
-      value: Anyway. That was a nice dinner, ain't it son?
+      value: Am I a joke to you?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[1].text
-      value: Nothin' feels better than to fill your stomach.
+      value: AND YOU'RE NODDING?!
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[2].text
-      value: I'll see you tomorrow, I'll have a surprise ready for you.
+      value: '''Aight that''s enough, you''re gonna leave your computer at work tomorrow.'
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[3].text
-      value: Oh hell no, you're not gettin' a promotion, you got a weird laugh.
+      value: That'll surely teach you about how to respect your elders.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[4].text
-      value: But I am considering getting you a potted plant
+      value: Goddamn kids...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[5].text
@@ -724,8 +741,40 @@ PrefabInstance:
       value: please send help
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
-      propertyPath: dialogues.Array.data[0].dial.Array.data[4].mustLaugh
+      propertyPath: dialogues.Array.data[6].dial.Array.data[0].text
+      value: Anyway. That was a nice dinner, ain't it son?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[1].text
+      value: Nothin' feels better than to fill your stomach.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[2].text
+      value: I'll see you tomorrow, I'll have a surprise ready for you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[3].text
+      value: Oh hell no, you're not gettin' a promotion, you got a weird laugh.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[4].text
+      value: But I am considering getting you a potted plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[5].text
+      value: '''Nough said, see you tomorrow. And on the clock.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[0].dial.Array.data[1].mustLaugh
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[0].dial.Array.data[2].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[0].dial.Array.data[4].mustLaugh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[8].mustLaugh
@@ -733,14 +782,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[3].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[4].mustLaugh
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[6].mustLaugh
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[1].dial.Array.data[7].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[1].dial.Array.data[8].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[3].mustLaugh
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
@@ -748,7 +809,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[2].dial.Array.data[7].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[3].dial.Array.data[3].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[3].dial.Array.data[6].mustLaugh
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
@@ -756,7 +825,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[3].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[4].dial.Array.data[7].mustLaugh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[4].mustLaugh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[4].mustLaugh
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7751275330920336317, guid: 6baca66af226eeb499249516b9886d60, type: 3}
