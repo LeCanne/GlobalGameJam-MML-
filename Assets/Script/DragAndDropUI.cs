@@ -8,8 +8,9 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     public Canvas canvas;
     RectTransform rectTransform;
-    public float Amplitude = 50f; // Distance max sur laquelle la bouche peut être déplacée
-    public float InitialYPos;
+    public float Amplitude = 50f; // Distance max sur laquelle la bouche peut être déplacée*
+    public float Force = 0.1f;
+    [HideInInspector] public float InitialYPos;
     private float mouseYOffset; // Diff entre positions y de la souris et de la bouche (évite que la bouche se centre sur la souris)
     private bool dragging = false;
 
@@ -26,7 +27,7 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, Mathf.Clamp(((Input.mousePosition.y / canvas.scaleFactor) - mouseYOffset),InitialYPos - Amplitude,InitialYPos));
+        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, Mathf.Clamp(((Input.mousePosition.y / canvas.scaleFactor) - mouseYOffset) * Force,InitialYPos - Amplitude,InitialYPos));
     }
 
     public void OnEndDrag(PointerEventData eventData)

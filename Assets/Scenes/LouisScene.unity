@@ -2272,6 +2272,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1131751262}
+    - target: {fileID: 6777710961791646714, guid: 259b11779d2a106429063a63886f1f07, type: 3}
+      propertyPath: Amplitude
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8292145986475598109, guid: 259b11779d2a106429063a63886f1f07, type: 3}
       propertyPath: dialScript
       value: 
