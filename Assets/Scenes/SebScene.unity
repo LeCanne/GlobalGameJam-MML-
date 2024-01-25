@@ -449,6 +449,22 @@ PrefabInstance:
       propertyPath: timeSlider
       value: 
       objectReference: {fileID: 79920960}
+    - target: {fileID: 3774363387722890572, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: lifeAnims.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774363387722890572, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: lifeAnims.Array.data[0]
+      value: 
+      objectReference: {fileID: 970346377}
+    - target: {fileID: 3774363387722890572, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: lifeAnims.Array.data[1]
+      value: 
+      objectReference: {fileID: 913277939}
+    - target: {fileID: 3774363387722890572, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: lifeAnims.Array.data[2]
+      value: 
+      objectReference: {fileID: 656805019}
     - target: {fileID: 5835638574049343222, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: m_Value
       value: 0
