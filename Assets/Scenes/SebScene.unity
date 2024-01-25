@@ -499,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.size
@@ -523,7 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.size
@@ -734,23 +734,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[5].text
-      value: '''Nough said, see you tomorrow. And on the clock.'
+      value: Goddamn kids...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[6].text
-      value: please send help
+      value: Goddamn kids...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[5].dial.Array.data[7].text
-      value: please send help
+      value: Goddamn kids...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.data[0].text
-      value: Anyway. That was a nice dinner, ain't it son?
+      value: Anyway.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.data[1].text
-      value: Nothin' feels better than to fill your stomach.
+      value: That was a nice dinner, ain't it son?
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.data[2].text
@@ -762,11 +762,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.data[4].text
-      value: But I am considering getting you a potted plant
+      value: But I am considering getting you a plant in a pot.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.data[5].text
       value: '''Nough said, see you tomorrow. And on the clock.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[6].text
+      value: Goddamn kids...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: dialogues.Array.data[6].dial.Array.data[7].text
+      value: Goddamn kids...
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[0].dial.Array.data[1].mustLaugh
@@ -842,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[6].dial.Array.data[4].mustLaugh
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7751275330920336317, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: m_AnchorMax.x
