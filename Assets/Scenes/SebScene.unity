@@ -555,12 +555,11 @@ PrefabInstance:
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[2].dial.Array.data[0].text
       value: Oh wait I got somethin' else. I ain't got the best vision but when looking
-        into the mirror I can see my hairs.
+        into the mirror I can see my hair.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[2].dial.Array.data[1].text
-      value: Helped me in pulling some ladies over. Unfortunaly for 'em I am married.
-        To business.
+      value: Helped me pull some ladies. Unfortunaly for 'em I am married. To business.
       objectReference: {fileID: 0}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.data[2].dial.Array.data[2].text
