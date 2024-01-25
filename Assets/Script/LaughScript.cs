@@ -43,9 +43,7 @@ public class LaughScript : MonoBehaviour
         }
         if (isOpen && rectTransform.anchoredPosition.y >= closedY) // Fermer
         {
-            movements += 1f;
             isOpen = false;
-            dialScript.OnExpression(true);
             lastMoveTime = Time.time;
         }
         if (movements >= MovementsToLaugh) // Rire
@@ -56,6 +54,11 @@ public class LaughScript : MonoBehaviour
         {
             movements = 0f;
             IsLaughing = false;
+        }
+        if (IsLaughing)
+        {
+            dialScript.OnExpression(true);
+            movements = 0;
         }
     }
 }
