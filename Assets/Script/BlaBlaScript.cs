@@ -59,6 +59,7 @@ public class BlaBlaScript : MonoBehaviour
     [SerializeField] private Animator playerAnims;
     [SerializeField] private AudioSource VoiceBoss;
     [SerializeField] private Vector2 bossPitchRange;
+    [SerializeField] private UnityEngine.UI.Image blackImage;
     #endregion
 
     private void Start()
@@ -194,8 +195,30 @@ public class BlaBlaScript : MonoBehaviour
 
     public void EndGame()
     {
+        StartCoroutine(Transiscreen());
         print("EndGame");
         enabled = false;
+    }
+
+    IEnumerator Transiscreen()
+    {
+        Color color = blackImage.color;
+        for (int i = 0; i < 30; i++)
+        {
+            color.a += 0.05f;
+            blackImage.color = color;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        if (isDead)
+        {
+            //ecrandemort
+        }
+        else
+        {
+            //ecrandewin
+        }
+
     }
     #endregion
 }
