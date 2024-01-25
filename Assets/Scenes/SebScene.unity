@@ -450,6 +450,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420033}
     - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: bossAnims
+      value: 
+      objectReference: {fileID: 1955451440}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: bossPitchRange.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
+      propertyPath: bossPitchRange.y
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618602367555484829, guid: 6baca66af226eeb499249516b9886d60, type: 3}
       propertyPath: dialogues.Array.size
       value: 6
       objectReference: {fileID: 0}

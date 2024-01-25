@@ -185,7 +185,7 @@ public class BlaBlaScript : MonoBehaviour
     public void DieNow()
     {
         isDead = true;
-        print("Dead");
+        availableNumbers.Clear();
     }
 
     public void EndGame()
