@@ -108,10 +108,10 @@ public class BlaBlaScript : MonoBehaviour
         } else if (!finishedTalk)
         {
             finishedTalk = true;
-            if(dialogueId != 0)
+            if(dialogueId != 0 && dialogueId < dialogues.Length-2)
             {
                 SendMessage("StartTimer");
-            } else if (line == 0 || line == 2)
+            } else if (dialogueId == 0 && (line == 0 || line == 2))
             {
                 OnExpression(false);
             }
@@ -120,7 +120,7 @@ public class BlaBlaScript : MonoBehaviour
 
     public void OnExpression(bool expression)
     {
-        if (actualCharacter == dialogues[dialogueId].dial[line].text.Length)
+        if (actualCharacter == dialogues[dialogueId].dial[line].text.Length && !isFinished)
         {
             if (dialogueId == 0 && line == 1)
             {
@@ -134,15 +134,15 @@ public class BlaBlaScript : MonoBehaviour
                 {
                     AddTextBox();
                 }
-            } else if (dialogueId > dialogues.Length - 2)
+            } else if (dialogueId >= dialogues.Length - 2)
             {
                 AddTextBox();
             } else
             {
+                isFinished = true;
                 CheckExpression(expression);
-                AddTextBox();
             }
-        } else if (!expression)
+        } else if (!expression && !isFinished)
         {
             textBox.text = dialogues[dialogueId].dial[line].text;
             actualCharacter = dialogues[dialogueId].dial[line].text.Length;
@@ -164,11 +164,20 @@ public class BlaBlaScript : MonoBehaviour
                 bossAnims.SetTrigger("To_Cringed");
                 playerAnims.SetTrigger("To_Lose");
             }
+        } else
+        {
+            AddTextBox();
         }
         
     }
 
     public void NoExpression()
+    {
+       bossAnims.SetTrigger("To_Cringed");
+       playerAnims.SetTrigger("To_Lose");
+    }
+
+    public void EndExpression()
     {
         AddTextBox();
     }
@@ -176,13 +185,13 @@ public class BlaBlaScript : MonoBehaviour
     public void AddTextBox()
     {
         actualCharacter = 0;
+        isFinished = false;
         
         line++;
         if(line >= dialogues[dialogueId].dial.Length)
         {
             if (dialogueId >= dialogues.Length - 2)
             {
-                print(line);
                 EndGame();
                 return;
             } 
@@ -209,7 +218,6 @@ public class BlaBlaScript : MonoBehaviour
                     line = 0;
                 }
             }
-            isFinished = false;
         }
         InstanciatedTexts.Add(Instantiate(textObject, textSpawn.position, textSpawn.rotation, textSpawn).transform);
         textBox = InstanciatedTexts[^1].GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -232,7 +240,6 @@ public class BlaBlaScript : MonoBehaviour
     public void EndGame()
     {
         StartCoroutine(Transiscreen());
-        print("EndGame");
         enabled = false;
     }
 

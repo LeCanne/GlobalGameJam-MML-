@@ -16,7 +16,7 @@ public class LaughScript : MonoBehaviour
     public float MovementResetTime = 3f; // Temps pour que le nombre de mouvements reset (si aucun n'est effectué)
     public AudioSource audioSource;
     public AudioClip audioClip;
-    public Vector2 PitchRange = new Vector2(0.95f, 1.05f); // Variation du pitch du rire
+    public Vector2 PitchRange = new (0.95f, 1.05f); // Variation du pitch du rire
     public bool IsLaughing = false; // Rire
     [SerializeField] private bool isOpen = false; // Bouche ouverte
     [SerializeField] private float closedY; // Pos Y où la bouche se fermera
